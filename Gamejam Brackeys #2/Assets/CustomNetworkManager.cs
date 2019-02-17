@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using TMPro;
+using System;
 
 public class CustomNetworkManager : NetworkManager
 {
 
     public Text maxPlayerCount;
-    public Text adressFieldText;
+    public TMP_Text adressFieldText;
 
     private int port;
     private string ip;
@@ -17,26 +19,36 @@ public class CustomNetworkManager : NetworkManager
     // Start is called before the first frame update
     void Start()
     {
-        maxPlayerCount.text = singleton.maxConnections + " Slots";
+        if (maxPlayerCount != null)
+            maxPlayerCount.text = singleton.maxConnections + " Slots";
+        adressFieldText.text = "localhost:7777";
+    }
 
+    public void ReadInputField()
+    {
         string[] adress = adressFieldText.text.Split(':');
-        if (adress.Length >= 1)
             ip = adress[0];
         if (adress.Length >= 2)
-        port = int.Parse(adress[1]);
+            port = int.Parse(adress[1]);
+        else
+            port = 7777;
     }
 
     public void Host()
     {
+        ReadInputField();
+        Debug.Log("Host on port: " + port);
         singleton.networkPort = port;
         singleton.StartHost();
     }
 
     public void Join()
     {
-        singleton.networkAddress = ip;
-        singleton.networkPort = port;
-        singleton.StartClient();
+            ReadInputField();
+            Debug.Log("Join on: " + ip + ":" + port);
+            singleton.networkAddress = ip;
+            singleton.networkPort = port;
+            singleton.StartClient();
     }
 
     public void Disconnect()
