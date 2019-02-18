@@ -9,6 +9,7 @@ public class PlayerController : NetworkBehaviour
     public float mouseSensitivity = 5f;
     public Camera playerCam;
     private Vector3 direction;
+    public float cameraOffset = 1.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class PlayerController : NetworkBehaviour
             return;
         }
 
-        playerCam.transform.position = transform.position;
+        playerCam.transform.position = transform.position + playerCam.transform.up * cameraOffset;
 
         // WASD
         direction.x = Input.GetAxis("Horizontal") * movementSpeed;
