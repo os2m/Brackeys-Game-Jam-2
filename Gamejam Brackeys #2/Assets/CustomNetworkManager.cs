@@ -10,7 +10,7 @@ public class CustomNetworkManager : NetworkManager
 {
 
     public Text maxPlayerCount;
-    public TMP_Text adressFieldText;
+    public Text adressFieldText;
 
     private int port;
     private string ip;
@@ -21,16 +21,16 @@ public class CustomNetworkManager : NetworkManager
     {
         if (maxPlayerCount != null)
             maxPlayerCount.text = singleton.maxConnections + " Slots";
-        adressFieldText.text = "localhost:7777";
+        //adressFieldText.text = "25.90.252.115";
     }
 
     public void ReadInputField()
     {
-        string[] adress = adressFieldText.text.Split(':');
-            ip = adress[0];
-        if (adress.Length >= 2)
-            port = int.Parse(adress[1]);
-        else
+        //string[] adress = adressFieldText.text.Split(':');
+            ip = adressFieldText.text;
+        //if (adress.Length >= 2)
+            //port = int.Parse(adress[1]);
+        //else
             port = 7777;
     }
 
@@ -44,10 +44,11 @@ public class CustomNetworkManager : NetworkManager
 
     public void Join()
     {
-            ReadInputField();
-            Debug.Log("Join on: " + ip + ":" + port);
-            singleton.networkAddress = ip;
-            singleton.networkPort = port;
+        adressFieldText.text = "Marc";
+        //ReadInputField();
+        Debug.Log("Join on: " + adressFieldText.text + ":" + 7777);
+            singleton.networkAddress = adressFieldText.text;
+            singleton.networkPort = 7777;
             singleton.StartClient();
     }
 
@@ -66,5 +67,12 @@ public class CustomNetworkManager : NetworkManager
         if (singleton.maxConnections > 0 || playerCount == 1)
             singleton.maxConnections += playerCount;
         maxPlayerCount.text = singleton.maxConnections + " Slots";
+    }
+
+    public void Update()
+    {
+        Debug.Log(adressFieldText.text.ToString() == "25.90.252.115");
+        //Debug.Log(adressFieldText.text + "" == "Marc");
+        //Debug.Log(adressFieldText.GetParsedText() == "Marc");
     }
 }
