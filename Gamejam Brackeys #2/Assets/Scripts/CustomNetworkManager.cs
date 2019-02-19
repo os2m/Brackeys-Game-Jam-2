@@ -15,22 +15,20 @@ public class CustomNetworkManager : NetworkManager
     private int port;
     private string ip;
 
+    public GameObject offlineMenu;
+    public GameObject onlineMenu;
+
 
     // Start is called before the first frame update
     void Start()
     {
         if (maxPlayerCount != null)
             maxPlayerCount.text = singleton.maxConnections + " Slots";
-        //adressFieldText.text = "25.90.252.115";
     }
 
     public void ReadInputField()
     {
-        //string[] adress = adressFieldText.text.Split(':');
             ip = adressFieldText.text;
-        //if (adress.Length >= 2)
-            //port = int.Parse(adress[1]);
-        //else
             port = 7777;
     }
 
@@ -44,7 +42,6 @@ public class CustomNetworkManager : NetworkManager
 
     public void Join()
     {
-        adressFieldText.text = "Marc";
         //ReadInputField();
         Debug.Log("Join on: " + adressFieldText.text + ":" + 7777);
             singleton.networkAddress = adressFieldText.text;
@@ -69,10 +66,17 @@ public class CustomNetworkManager : NetworkManager
         maxPlayerCount.text = singleton.maxConnections + " Slots";
     }
 
-    public void Update()
+    private void OnLevelWasLoaded(int level)
     {
-        Debug.Log(adressFieldText.text.ToString() == "25.90.252.115");
-        //Debug.Log(adressFieldText.text + "" == "Marc");
-        //Debug.Log(adressFieldText.GetParsedText() == "Marc");
+        if (level == 0)
+        {
+            offlineMenu.SetActive(true);
+            onlineMenu.SetActive(false);
+        }
+        else
+        {
+            offlineMenu.SetActive(false);
+            onlineMenu.SetActive(true);
+        }
     }
 }
