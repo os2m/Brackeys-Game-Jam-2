@@ -42,8 +42,6 @@ public class CustomNetworkManager : NetworkManager
 
     public void Join()
     {
-        //ReadInputField();
-        Debug.Log("Join on: " + adressFieldText.text + ":" + 7777);
             singleton.networkAddress = adressFieldText.text;
             singleton.networkPort = 7777;
             singleton.StartClient();
