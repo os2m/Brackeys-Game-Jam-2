@@ -1,17 +1,57 @@
 fileFormatVersion: 2
-guid: 13cd568bed77b4c388d96728ac717abc
+guid: b2695cdec1af4894d9b890b1bfbb1feb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2100000: None
-    2300000: default
-    3300000: default
-    4300000: default
-    6400000: default
+    100000: Armature
+    100002: Camera
+    100004: Chest
+    100006: Cube
+    100008: Foot.L
+    100010: Foot.R
+    100012: Hand.L
+    100014: Hand.R
+    100016: Head
+    100018: Lamp
+    100020: Lower_Arm.L
+    100022: Lower_Arm.R
+    100024: Lower_Leg.L
+    100026: Lower_Leg.R
+    100028: Neck
+    100030: //RootNode
+    100032: Torso
+    100034: Upper_Arm.L
+    100036: Upper_Arm.R
+    100038: Upper_Leg.L
+    100040: Upper_Leg.R
+    400000: Armature
+    400002: Camera
+    400004: Chest
+    400006: Cube
+    400008: Foot.L
+    400010: Foot.R
+    400012: Hand.L
+    400014: Hand.R
+    400016: Head
+    400018: Lamp
+    400020: Lower_Arm.L
+    400022: Lower_Arm.R
+    400024: Lower_Leg.L
+    400026: Lower_Leg.R
+    400028: Neck
+    400030: //RootNode
+    400032: Torso
+    400034: Upper_Arm.L
+    400036: Upper_Arm.R
+    400038: Upper_Leg.L
+    400040: Upper_Leg.R
+    2000000: Camera
+    2100000: Material
+    4300000: Cube
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,7 +105,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -92,7 +132,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
