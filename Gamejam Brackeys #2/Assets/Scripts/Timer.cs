@@ -28,7 +28,8 @@ public class Timer : NetworkBehaviour
     {
         if (isServer)
         {
-            time -= Time.deltaTime;
+            if (time > 0)
+                time -= Time.deltaTime;
 
             RpcSyncVars(time, isMaster);
         }
@@ -36,7 +37,10 @@ public class Timer : NetworkBehaviour
 
         if (isMaster == 1 && text != null)
         {
-            text.text = (int)time + "";
+            if (time > 0)
+                text.text = (int)time + "";
+            else
+                text.text = "Time is over!";
         }
     }
 

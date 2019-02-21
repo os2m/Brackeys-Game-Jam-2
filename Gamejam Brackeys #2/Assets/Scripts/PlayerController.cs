@@ -13,6 +13,8 @@ public class PlayerController : NetworkBehaviour
     private Vector3 spawnPoint;
     private AudioSource audioSource;
 
+    [SyncVar] int hasFinished;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +61,16 @@ public class PlayerController : NetworkBehaviour
     {
         if (other.CompareTag("Respawn"))
             spawnPoint = transform.position;
+
+        else if (other.CompareTag("Finish")) {
+            hasFinished = 1;
+            RpcSyncVars(hasFinished);
+        }
+    }
+
+    [ClientRpc]
+    void RpcSyncVars(int varToSync)
+    {
+        hasFinished = varToSync;
     }
 }
