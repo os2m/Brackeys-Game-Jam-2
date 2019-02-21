@@ -23,7 +23,24 @@ public class ShowText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer != null && timer.text == "Time is over!")
+        pcs = GameObject.FindGameObjectsWithTag("Player");
+
+        for (int i = 0; i < pcs.Length; i++)
+        {
+            GameObject pc = pcs[i];
+            if (pc.GetComponent<PlayerController>().hasFinished == 1 && win != null && lose != null)
+            {
+                End();
+                if (pc.name == "Player (Local)")
+                    win.SetActive(true);
+                else
+                    lose.SetActive(true);
+                return;
+            } 
+        }
+
+
+        if (timer != null && timer.text == "Time is over!" && !(win.active || lose.active))
         {
             timeUp.SetActive(true);
             End();
@@ -34,11 +51,11 @@ public class ShowText : MonoBehaviour
 
     public void End()
     {
-        pcs = GameObject.FindGameObjectsWithTag("Player");
+
 
         for (int i = 0; i < pcs.Length; i++)
         {
-            Debug.Log(pcs);
+
             GameObject pc = pcs[i];
             pc.GetComponent<PlayerController>().movementSpeed = 0;
         }

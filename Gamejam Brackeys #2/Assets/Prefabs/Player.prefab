@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1004511924900805950}
   - component: {fileID: 1004511924900805949}
   - component: {fileID: 1004511924900805948}
-  - component: {fileID: 1004511924900805951}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -78,19 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1004511924900805951
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004511924900805945}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1004511925314293486
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +95,7 @@ GameObject:
   - component: {fileID: 8076399195209589464}
   - component: {fileID: 6363980433168920641}
   - component: {fileID: 3197969218031520569}
+  - component: {fileID: 1782866951358619170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -206,6 +193,7 @@ MonoBehaviour:
   mouseSensitivity: 5
   playerCam: {fileID: 0}
   cameraOffset: 1.1
+  hasFinished: 0
 --- !u!143 &1004511925314293459
 CharacterController:
   m_ObjectHideFlags: 0
@@ -215,7 +203,7 @@ CharacterController:
   m_GameObject: {fileID: 1004511925314293486}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -389,3 +377,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 10
   isMaster: 0
+--- !u!54 &1782866951358619170
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004511925314293486}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0

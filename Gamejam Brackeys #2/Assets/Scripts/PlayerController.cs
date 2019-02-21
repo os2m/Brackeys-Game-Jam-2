@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
-    public float movementSpeed = .15f;
+    public float movementSpeed = .2f;
     public float mouseSensitivity = 5f;
     public Camera playerCam;
     private Vector3 direction;
@@ -13,7 +13,7 @@ public class PlayerController : NetworkBehaviour
     private Vector3 spawnPoint;
     private AudioSource audioSource;
 
-    [SyncVar] int hasFinished;
+    [SyncVar] public int hasFinished;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +28,17 @@ public class PlayerController : NetworkBehaviour
         GetComponent<MeshRenderer>().material.color = Color.green;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!isLocalPlayer)
         {
             return;
         }
+        else
+        {
+            this.gameObject.name = "Player (Local)";
+        }
+
 
         playerCam.transform.position = transform.position + playerCam.transform.up * cameraOffset;
 
