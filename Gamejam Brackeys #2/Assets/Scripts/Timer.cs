@@ -6,7 +6,7 @@ using TMPro;
 
 public class Timer : NetworkBehaviour
 {
-    [SyncVar] public float time = 60;
+    [SyncVar] public float time = 0;
     [SyncVar] public int isMaster = 0;
 
     TMP_Text text;
@@ -17,7 +17,7 @@ public class Timer : NetworkBehaviour
 
         if (isServer)
         {
-            time = 80;
+            time = 60;
             if (isLocalPlayer)
                 isMaster = 1;
         }
@@ -38,9 +38,9 @@ public class Timer : NetworkBehaviour
 
         if (isMaster == 1 && text != null)
         {
-            if (time > 70)
+            if (time > 50)
                 text.text = "Wait!";
-            else if (time <= 70 && time > 0)
+            else if (time <= 50 && time > 0)
                 text.text = (int)time + "";
             else
                 text.text = "Time is over!";

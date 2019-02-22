@@ -100,12 +100,15 @@ public class PlayerController : NetworkBehaviour
     public float mouseSensitivity = 5f;
     public Camera playerCam;
     private Vector3 direction;
-    public float cameraOffset = 1.1f;
+    public float cameraOffsetUp = 1.1f;
+    public float cameraOffsetForward = -2f;
 
     /* NEW */
     public int hasFinished = 0;
     private Vector3 spawnPoint;
     private AudioSource audioSource;
+
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -133,8 +136,17 @@ public class PlayerController : NetworkBehaviour
         {
             return;
         }
+        else
+        {
+            this.gameObject.name = "Player (Local)";
+        }
 
-        playerCam.transform.position = transform.position + playerCam.transform.up * cameraOffset;
+        float speedProof = direction.x + direction.z + direction.x;
+        if (speedProof < 0)
+            speedProof = speedProof * -1;
+        anim.SetFloat("running", speedProof);
+
+        playerCam.transform.position = transform.position + (playerCam.transform.up * cameraOffsetUp) + playerCam.transform.forward * cameraOffsetForward;
 
         // WASD
         direction.x = Input.GetAxis("Horizontal") * movementSpeed;

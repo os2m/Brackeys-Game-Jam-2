@@ -19,7 +19,7 @@ public class ShowText : MonoBehaviour
 
     private bool end;
 
-    public float playerMovementSpeed = .2f;
+    public float playerMovementSpeed = .05f;
     private float time = 10;
 
     private GameObject pc;
@@ -65,6 +65,7 @@ public class ShowText : MonoBehaviour
             {
                 time -= Time.deltaTime;
                 waitText.text = "Wait " + (int) time + " seconds for other players to log in.";
+
             }
 
             End(0);
