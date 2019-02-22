@@ -14,9 +14,13 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int random = Random.Range(0, cars.Length - 1);
-        GameObject car = Instantiate(cars[random], new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z), transform.rotation);
-        car.transform.parent = transform;
+        if (cars.Length != 0)
+        {
+            int random = Random.Range(0, cars.Length - 1);
+            GameObject car = Instantiate(cars[random], new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z), transform.rotation);
+            car.transform.parent = transform;
+        }
+
         if (destroy)
             Destroy(gameObject, destroytime);
     }
@@ -27,9 +31,15 @@ public class Car : MonoBehaviour
         transform.Translate(speed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
             other.GetComponent<PlayerController>().Respawn();
+        else if (other.CompareTag("Car"))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Car");
+        }
+
     }
 }

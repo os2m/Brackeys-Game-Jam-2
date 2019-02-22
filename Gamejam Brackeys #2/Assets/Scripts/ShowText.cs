@@ -13,6 +13,8 @@ public class ShowText : MonoBehaviour
     public TMP_Text timer;
 
     public GameObject[] pcs;
+    public GameObject bus;
+    public GameObject woman;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,8 @@ public class ShowText : MonoBehaviour
         {
             timeUp.SetActive(true);
             End();
+            bus.GetComponent<Move>().enabled = true;
+            woman.SetActive(false);
             return;
         }
 
