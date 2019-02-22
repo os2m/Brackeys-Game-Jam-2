@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.75318986, g: 0.70527714, b: 0.7395902, a: 1}
+  m_IndirectSpecularColor: {r: 0.7532028, g: 0.7052356, b: 0.7395752, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_text: You missed the bus of your dream woman. She left without you and will look
     for another man.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -7905,6 +7905,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 507603971}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &516041082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516041083}
+  - component: {fileID: 516041084}
+  m_Layer: 0
+  m_Name: fenceCollider2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516041083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516041082}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 57.46421, y: -0.39258355, z: -8.878748}
+  m_LocalScale: {x: 0.25, y: 1, z: 30}
+  m_Children: []
+  m_Father: {fileID: 1624826474}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &516041084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516041082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &516224646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9394,7 +9438,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Wait 10 seconds for other players to log in.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -14248,7 +14292,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 9999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -17767,7 +17811,7 @@ MonoBehaviour:
   m_text: Another man has taken your dream wife. You will never forget the day when
     you were not fast enough.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -19238,7 +19282,7 @@ MonoBehaviour:
   m_text: You did it. You arrived at the bus in time and secured your dream wife before
     others could do it.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -25525,6 +25569,8 @@ Transform:
   - {fileID: 2084293525}
   - {fileID: 2083195534}
   - {fileID: 1068196543}
+  - {fileID: 1925539093}
+  - {fileID: 516041083}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28457,6 +28503,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionSpeed: {x: 0, y: 0, z: 0.2}
+--- !u!1 &1925539092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925539093}
+  - component: {fileID: 1925539094}
+  m_Layer: 0
+  m_Name: fenceCollider1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1925539093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925539092}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 53.08421, y: -0.39258355, z: -32.778748}
+  m_LocalScale: {x: 0.25, y: 1, z: 30}
+  m_Children: []
+  m_Father: {fileID: 1624826474}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1925539094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925539092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1929799053
 PrefabInstance:
   m_ObjectHideFlags: 0
