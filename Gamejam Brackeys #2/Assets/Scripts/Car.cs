@@ -38,7 +38,7 @@ public class Car : MonoBehaviour
         else if (other.CompareTag("Car"))
         {
             Destroy(other.gameObject);
-            Debug.Log("Car");
+            //Debug.Log("Car");
         }
 
     }

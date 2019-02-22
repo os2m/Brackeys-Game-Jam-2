@@ -14,9 +14,10 @@ public class Timer : NetworkBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+
         if (isServer)
         {
-            time = 60;
+            time = 80;
             if (isLocalPlayer)
                 isMaster = 1;
         }
@@ -37,7 +38,9 @@ public class Timer : NetworkBehaviour
 
         if (isMaster == 1 && text != null)
         {
-            if (time > 0)
+            if (time > 70)
+                text.text = "Wait!";
+            else if (time <= 70 && time > 0)
                 text.text = (int)time + "";
             else
                 text.text = "Time is over!";

@@ -8,7 +8,7 @@ public class Music : MonoBehaviour
 
     private AudioSource music;
     public Button button;
-    private float maxVolume = 0.3f;
+    private float maxVolume = 0.2f;
 
     public Sprite on;
     public Sprite off;
