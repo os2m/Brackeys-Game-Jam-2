@@ -72,7 +72,7 @@ public class ShowText : MonoBehaviour
             wait.SetActive(true);
         }
 
-        else if (timer != null && timer.text == "Time is over!" && !end)
+        else if (timer != null && timer.text == "Time is over!" && !end && !(win.active || lose.active))
         {
             end = true;
             timeUp.SetActive(true);
