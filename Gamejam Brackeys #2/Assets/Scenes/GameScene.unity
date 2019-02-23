@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.7532028, g: 0.7052356, b: 0.7395752, a: 1}
+  m_IndirectSpecularColor: {r: 0.75318986, g: 0.70527714, b: 0.7395902, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_text: You missed the bus of your dream woman. She left without you and will look
     for another man.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
   m_inputSource: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -9438,7 +9438,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Wait 10 seconds for other players to log in.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -14292,7 +14292,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 9999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -17811,7 +17811,7 @@ MonoBehaviour:
   m_text: Another man has taken your dream wife. You will never forget the day when
     you were not fast enough.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -17893,7 +17893,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
   m_inputSource: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -19282,7 +19282,7 @@ MonoBehaviour:
   m_text: You did it. You arrived at the bus in time and secured your dream wife before
     others could do it.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: c87e8ca7dc9ae4742a1812336e40c92d, type: 2}
   m_sharedMaterial: {fileID: 21212852962883276, guid: c87e8ca7dc9ae4742a1812336e40c92d,
     type: 2}
   m_fontSharedMaterials: []
@@ -19364,7 +19364,7 @@ MonoBehaviour:
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
   m_inputSource: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
